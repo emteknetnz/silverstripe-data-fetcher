@@ -1,0 +1,10 @@
+# TODO: move to rhino api _config folder (currently)
+
+---
+Name: rhinoapi-config
+Only:
+  moduleexists: 'symbiote/silverstripe-queuedjobs'
+---
+Symbiote\QueuedJobs\DataObjects\QueuedJobDescriptor:
+  extensions:
+    - 'emteknetnz\RhinoApi\Extensions\QueuedJobDescriptorExtension'
