@@ -1,10 +1,10 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Apis;
+namespace emteknetnz\DataFetcher\Apis;
 
-use emteknetnz\ApiDataFetcher\Misc\Consts;
-use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
-use emteknetnz\ApiDataFetcher\Requesters\RestRequester;
+use emteknetnz\DataFetcher\Misc\Consts;
+use emteknetnz\DataFetcher\Requesters\AbstractRequester;
+use emteknetnz\DataFetcher\Requesters\RestRequester;
 use SilverStripe\Core\Environment;
 
 

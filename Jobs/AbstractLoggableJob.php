@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Jobs;
+namespace emteknetnz\DataFetcher\Jobs;
 
 use Exception;
-use emteknetnz\ApiDataFetcher\Misc\Logger;
+use emteknetnz\DataFetcher\Misc\Logger;
 use SilverStripe\Core\Injector\Injectable;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\FieldType\DBDatetime;

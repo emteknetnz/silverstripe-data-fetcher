@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Models;
+namespace emteknetnz\DataFetcher\Models;
 
 use SilverStripe\ORM\DataObject;
 

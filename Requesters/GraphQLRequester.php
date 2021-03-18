@@ -1,8 +1,8 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Requesters;
+namespace emteknetnz\DataFetcher\Requesters;
 
-use emteknetnz\ApiDataFetcher\Misc\Logger;
+use emteknetnz\DataFetcher\Misc\Logger;
 
 class GraphQLRequester extends AbstractRequester
 {

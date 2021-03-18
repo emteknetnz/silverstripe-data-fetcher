@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Requesters;
+namespace emteknetnz\DataFetcher\Requesters;
 
-use emteknetnz\ApiDataFetcher\Misc\Consts;
-use emteknetnz\ApiDataFetcher\Misc\Logger;
+use emteknetnz\DataFetcher\Misc\Consts;
+use emteknetnz\DataFetcher\Misc\Logger;
 
 class RestRequester extends AbstractRequester
 {

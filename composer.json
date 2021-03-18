@@ -1,5 +1,5 @@
 {
-    "name": "emteknetnz/api-data-fetcher",
+    "name": "emteknetnz/silverstripe-data-fetcher",
     "description": "Fetches data from github and traivs-ci apis",
     "authors": [
         {

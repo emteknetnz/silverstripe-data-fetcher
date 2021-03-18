@@ -1,10 +1,10 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Extensions;
+namespace emteknetnz\DataFetcher\Extensions;
 
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Extension;
-use emteknetnz\ApiDataFetcher\Jobs\AbstractLoggableJob;
+use emteknetnz\DataFetcher\Jobs\AbstractLoggableJob;
 
 /**
  * Auto-creates an instance of all subclasses of AbstractLoggableJob

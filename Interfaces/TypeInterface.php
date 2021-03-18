@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Interfaces;
+namespace emteknetnz\DataFetcher\Interfaces;
 
 interface TypeInterface
 {

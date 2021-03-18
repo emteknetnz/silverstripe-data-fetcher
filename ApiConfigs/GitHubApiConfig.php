@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Apis;
+namespace emteknetnz\DataFetcher\Apis;
 
-use emteknetnz\ApiDataFetcher\Misc\Consts;
-use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
+use emteknetnz\DataFetcher\Misc\Consts;
+use emteknetnz\DataFetcher\Requesters\AbstractRequester;
 use SilverStripe\Core\Environment;
 
 class GitHubApiConfig implements ApiConfigInterface

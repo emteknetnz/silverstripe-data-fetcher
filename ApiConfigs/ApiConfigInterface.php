@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Apis;
+namespace emteknetnz\DataFetcher\Apis;
 
-use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
-use emteknetnz\ApiDataFetcher\Interfaces\TypeInterface;
+use emteknetnz\DataFetcher\Requesters\AbstractRequester;
+use emteknetnz\DataFetcher\Interfaces\TypeInterface;
 
 interface ApiConfigInterface extends TypeInterface
 {

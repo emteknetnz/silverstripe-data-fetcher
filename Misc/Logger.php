@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Misc;
+namespace emteknetnz\DataFetcher\Misc;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Injector\Injectable;

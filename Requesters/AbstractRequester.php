@@ -1,12 +1,12 @@
 <?php
 
-namespace emteknetnz\ApiDataFetcher\Requesters;
+namespace emteknetnz\DataFetcher\Requesters;
 
-use emteknetnz\ApiDataFetcher\Apis\ApiConfigInterface;
-use emteknetnz\ApiDataFetcher\Misc\Consts;
-use emteknetnz\ApiDataFetcher\Models\ApiData;
-use emteknetnz\ApiDataFetcher\Misc\Logger;
-use emteknetnz\ApiDataFetcher\Interfaces\TypeInterface;
+use emteknetnz\DataFetcher\Apis\ApiConfigInterface;
+use emteknetnz\DataFetcher\Misc\Consts;
+use emteknetnz\DataFetcher\Models\ApiData;
+use emteknetnz\DataFetcher\Misc\Logger;
+use emteknetnz\DataFetcher\Interfaces\TypeInterface;
 use stdClass;
 
 abstract class AbstractRequester implements TypeInterface
