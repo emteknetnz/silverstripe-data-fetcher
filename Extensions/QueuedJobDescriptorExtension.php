@@ -1,10 +1,10 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Extensions;
+namespace emteknetnz\ApiDataFetcher\Extensions;
 
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Extension;
-use emteknetnz\RhinoApi\Jobs\AbstractLoggableJob;
+use emteknetnz\ApiDataFetcher\Jobs\AbstractLoggableJob;
 
 /**
  * Auto-creates an instance of all subclasses of AbstractLoggableJob

@@ -1,12 +1,12 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Requesters;
+namespace emteknetnz\ApiDataFetcher\Requesters;
 
-use emteknetnz\RhinoApi\Apis\ApiConfigInterface;
-use emteknetnz\RhinoApi\Misc\Consts;
-use emteknetnz\RhinoApi\Models\ApiData;
-use emteknetnz\RhinoApi\Misc\Logger;
-use emteknetnz\RhinoApi\Interfaces\TypeInterface;
+use emteknetnz\ApiDataFetcher\Apis\ApiConfigInterface;
+use emteknetnz\ApiDataFetcher\Misc\Consts;
+use emteknetnz\ApiDataFetcher\Models\ApiData;
+use emteknetnz\ApiDataFetcher\Misc\Logger;
+use emteknetnz\ApiDataFetcher\Interfaces\TypeInterface;
 use stdClass;
 
 abstract class AbstractRequester implements TypeInterface

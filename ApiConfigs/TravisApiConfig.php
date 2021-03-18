@@ -1,10 +1,10 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Apis;
+namespace emteknetnz\ApiDataFetcher\Apis;
 
-use emteknetnz\RhinoApi\Misc\Consts;
-use emteknetnz\RhinoApi\Requesters\AbstractRequester;
-use emteknetnz\RhinoApi\Requesters\RestRequester;
+use emteknetnz\ApiDataFetcher\Misc\Consts;
+use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
+use emteknetnz\ApiDataFetcher\Requesters\RestRequester;
 use SilverStripe\Core\Environment;
 
 

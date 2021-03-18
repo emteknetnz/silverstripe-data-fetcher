@@ -1,8 +1,8 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Requesters;
+namespace emteknetnz\ApiDataFetcher\Requesters;
 
-use emteknetnz\RhinoApi\Misc\Logger;
+use emteknetnz\ApiDataFetcher\Misc\Logger;
 
 class GraphQLRequester extends AbstractRequester
 {

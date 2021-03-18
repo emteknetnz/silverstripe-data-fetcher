@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Apis;
+namespace emteknetnz\ApiDataFetcher\Apis;
 
-use emteknetnz\RhinoApi\Misc\Consts;
-use emteknetnz\RhinoApi\Requesters\AbstractRequester;
+use emteknetnz\ApiDataFetcher\Misc\Consts;
+use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
 use SilverStripe\Core\Environment;
 
 class GitHubApiConfig implements ApiConfigInterface

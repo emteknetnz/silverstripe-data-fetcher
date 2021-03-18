@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Jobs;
+namespace emteknetnz\ApiDataFetcher\Jobs;
 
 use Exception;
-use emteknetnz\RhinoApi\Misc\Logger;
+use emteknetnz\ApiDataFetcher\Misc\Logger;
 use SilverStripe\Core\Injector\Injectable;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\FieldType\DBDatetime;

@@ -2,7 +2,7 @@
 
 namespace emteknetnz\Rhino\Services;
 
-use emteknetnz\RhinoApi\Misc\Logger;
+use emteknetnz\ApiDataFetcher\Misc\Logger;
 
 /*
 Assumes data comes in as:

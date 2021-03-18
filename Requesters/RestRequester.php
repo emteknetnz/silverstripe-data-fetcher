@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Requesters;
+namespace emteknetnz\ApiDataFetcher\Requesters;
 
-use emteknetnz\RhinoApi\Misc\Consts;
-use emteknetnz\RhinoApi\Misc\Logger;
+use emteknetnz\ApiDataFetcher\Misc\Consts;
+use emteknetnz\ApiDataFetcher\Misc\Logger;
 
 class RestRequester extends AbstractRequester
 {

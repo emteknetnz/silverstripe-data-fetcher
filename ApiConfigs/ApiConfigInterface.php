@@ -1,9 +1,9 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Apis;
+namespace emteknetnz\ApiDataFetcher\Apis;
 
-use emteknetnz\RhinoApi\Requesters\AbstractRequester;
-use emteknetnz\RhinoApi\Interfaces\TypeInterface;
+use emteknetnz\ApiDataFetcher\Requesters\AbstractRequester;
+use emteknetnz\ApiDataFetcher\Interfaces\TypeInterface;
 
 interface ApiConfigInterface extends TypeInterface
 {

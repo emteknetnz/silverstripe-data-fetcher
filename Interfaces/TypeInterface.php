@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Interfaces;
+namespace emteknetnz\ApiDataFetcher\Interfaces;
 
 interface TypeInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Misc;
+namespace emteknetnz\ApiDataFetcher\Misc;
 
 use SilverStripe\Control\Controller;
 use SilverStripe\Core\Injector\Injectable;

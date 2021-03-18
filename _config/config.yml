@@ -1,10 +1,10 @@
 # TODO: move to rhino api _config folder (currently)
 
 ---
-Name: rhinoapi-config
+Name: ApiDataFetcher-config
 Only:
   moduleexists: 'symbiote/silverstripe-queuedjobs'
 ---
 Symbiote\QueuedJobs\DataObjects\QueuedJobDescriptor:
   extensions:
-    - 'emteknetnz\RhinoApi\Extensions\QueuedJobDescriptorExtension'
+    - 'emteknetnz\ApiDataFetcher\Extensions\QueuedJobDescriptorExtension'

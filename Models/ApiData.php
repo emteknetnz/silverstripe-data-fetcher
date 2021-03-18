@@ -1,6 +1,6 @@
 <?php
 
-namespace emteknetnz\RhinoApi\Models;
+namespace emteknetnz\ApiDataFetcher\Models;
 
 use SilverStripe\ORM\DataObject;
 
