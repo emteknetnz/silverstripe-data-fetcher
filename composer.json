@@ -1,0 +1,15 @@
+{
+    "name": "emteknetnz/api-data-fetcher",
+    "description": "Fetches data from github and traivs-ci apis",
+    "authors": [
+        {
+            "name": "Steve Boyd",
+            "email": "emteknetnz@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "silverstripe/framework": "^4.7",
+        "symbiote/silverstripe-queuedjobs": "^4.6"
+    }
+}
