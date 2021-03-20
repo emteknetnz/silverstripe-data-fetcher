@@ -35,7 +35,6 @@ class Consts
                 'cwp-search',
                 'cwp-starter-theme',
                 'cwp-watea-theme',
-                'cwp-theme-default',
                 'silverstripe-akismet',
                 'silverstripe-auditor',
                 'silverstripe-blog',
@@ -137,6 +136,7 @@ class Consts
         'legacy' => [
             'silverstripe' => [
                 'cwp-agencyextensions',
+                'cwp-theme-default',
                 'silverstripe-controllerpolicy',
                 'silverstripe-elemental-blocks',
                 'silverstripe-sqlite3',
