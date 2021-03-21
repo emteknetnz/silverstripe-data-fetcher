@@ -15,6 +15,13 @@ class Consts
                 'silverstripe-composer-update-checker',
                 'silverstripe-composer-security-checker',
             ],
+            'colymba' => [
+                'GridFieldBulkEditingTools' // supported dependency
+            ],
+            'dnadesign' => [
+                'silverstripe-elemental-subsites', // supported depenendecy
+                'silverstripe-elemental-userforms', // supported depenendecy
+            ],
             'silverstripe' => [
                 'recipe-cms',
                 'recipe-core',
@@ -31,10 +38,12 @@ class Consts
                 'cwp-pdfexport',
                 'cwp-recipe-cms',
                 'cwp-recipe-core',
+                'cwp-recipe-kitchen-sink',
                 'cwp-recipe-search',
                 'cwp-search',
                 'cwp-starter-theme',
                 'cwp-watea-theme',
+                'silverstripe-simple',
                 'silverstripe-akismet',
                 'silverstripe-auditor',
                 'silverstripe-blog',
@@ -103,9 +112,6 @@ class Consts
                 'sspak',
                 'vendor-plugin',
             ],
-            'silverstripe-themes' => [
-                'silverstripe-simple',
-            ],
             'symbiote' => [
                 'silverstripe-advancedworkflow',
                 'silverstripe-gridfieldextensions', // only a supported dependency, though ...
@@ -113,14 +119,18 @@ class Consts
                 'silverstripe-queuedjobs',
             ],
             'tractorcow' => [
-                // 'classproxy', // supported dependency
-                'silverstripe-fluent', // only a supported dependency, though in kitchen-sink
-                // 'silverstripe-proxy-db', // supported dependency
+                'classproxy', // supported dependency
+                'silverstripe-fluent', // supported dependency
+                'silverstripe-proxy-db', // supported dependency
+            ],
+            'undefinedoffset' => [
+                'sortablegridfield'
             ]
         ],
         'ss3' => [
             'silverstripe' => [
                 'cwp-recipe-basic',
+                'cwp-recipe-basic-dev',
                 'cwp-recipe-blog',
                 'silverstripe-activedirectory',
                 'silverstripe-dms',
@@ -143,8 +153,15 @@ class Consts
             ]
         ],
         'tooling' => [
+            'composer' => [
+                // 'installers' // supported depenendecy
+            ],
             'lekoala' => [
                 'silverstripe-debugbar',
+            ],
+            'hafriedlander' => [
+                'phockito', // supported depenendecy
+                'silverstripe-phockito' // supported depenendecy
             ],
             'silverstripe' => [
                 'cow',
@@ -153,6 +170,7 @@ class Consts
                 'recipe-testing',
                 'silverstripe-behat-extension',
                 'silverstripe-serve',
+                'silverstripe-graphql-devtools',
                 'silverstripe-travis-shared',
                 'silverstripe-testsession',
                 'webpack-config',

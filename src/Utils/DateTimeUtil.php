@@ -64,4 +64,10 @@ class DateTimeUtil
         }
         return $m[3] . '-' . $m[2] . '-' . $m[1];
     }
+
+    public static function formatMysqlTimestamp(string $mysqlTimestamp): string
+    {
+        $dt = DateTime::createFromFormat('Y-m-d H:i:s', $mysqlTimestamp);
+        return $dt->format('D g:iA j M Y');
+    }
 }
