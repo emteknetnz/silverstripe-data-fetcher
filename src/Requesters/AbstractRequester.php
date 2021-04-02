@@ -42,7 +42,8 @@ abstract class AbstractRequester implements TypeInterface
         $ucType = strtoupper($this->getType());
         $ucMethod = strtoupper($this->getMethod($postBody));
         $url = $this->apiConfig->deriveUrl($path);
-        $logStr = "{$ucType} {$ucMethod} {$url} {$postBodyHash}";
+        $hash = $postBodyHash == md5('') ? '' : $postBodyHash;
+        $logStr = "{$ucType} {$ucMethod} {$url} {$hash}";
 
         if ($refetch && $apiData) {
             $apiData->delete();

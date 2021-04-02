@@ -34,17 +34,46 @@ class GitHubApiConfig implements ApiConfigInterface
         ];
     }
 
-    public function deriveUrl(string $path): string
+    public function deriveUrl(string $path, string $paginationOffset = ''): string
     {
         $domain = self::DOMAIN;
         $remotePath = str_replace($domain, '', $path);
         $remotePath = ltrim($remotePath, '/');
         // requesting details
-        if (preg_match('#/[0-9]+$#', $remotePath) || preg_match('@/[0-9]+/files$@', $remotePath)) {
+        if (!$this->supportsPagination($path)) {
             return "{$domain}/{$remotePath}";
         }
         // requesting a list
+        $offset = $paginationOffset ? "&page={$paginationOffset}" : '';
         $op = strpos($remotePath, '?') ? '&' : '?';
-        return"{$domain}/{$remotePath}{$op}per_page=100";
+        return "{$domain}/{$remotePath}{$op}per_page=100{$offset}";
+    }
+
+    public function supportsPagination(string $path): bool 
+    {
+        // requesting details
+        if (preg_match('#/[0-9]+$#', $path) || preg_match('@/[0-9]+/files$@', $path)) {
+            return false;
+        }
+        // returning a list
+        return true;
+    }
+
+    public function getPaginationOffsetInitial(): int
+    {
+        // page=
+        return 1;
+    }
+
+    public function getPaginationOffsetIncrement(): int
+    {
+        // page=(+1)
+        return 1;
+    }
+
+    public function getPaginationOffsetMaximum(): int
+    {
+        // page=
+        return 10;
     }
 }

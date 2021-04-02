@@ -7,5 +7,3 @@ Fetches data from github and traivs-ci apis
 GITHUB_USER="xyz"
 
 GITHUB_TOKEN="123"
-
-TRAVIS_TOKEN="abc"

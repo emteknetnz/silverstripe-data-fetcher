@@ -16,27 +16,45 @@ class RestRequester extends AbstractRequester
     {
         $method = $this->getMethod($postBody);
         $apiConfig = $this->apiConfig;
-        $ch = curl_init();
-        $url = $apiConfig->deriveUrl($path);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        if ($method == Consts::METHOD_POST) {
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $postBody);
+        $supportsPagination = $apiConfig->supportsPagination($path);
+        $initial = $apiConfig->getPaginationOffsetInitial();
+        $increment = $apiConfig->getPaginationOffsetIncrement();
+        $maximum = $supportsPagination ? $apiConfig->getPaginationOffsetMaximum() : $initial;
+        $results = [];
+        for ($offset = $initial; $offset <= $maximum; $offset = $offset + $increment) {
+            $ch = curl_init();
+            $url = $apiConfig->deriveUrl($path, $offset);
+            curl_setopt($ch, CURLOPT_URL, $url);
+            if ($method == Consts::METHOD_POST) {
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $postBody);
+            }
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $apiConfig->getHeaders($this, $method));
+            foreach ($apiConfig->getCurlOptions() as $curlOpt => $value) {
+                curl_setopt($ch, $curlOpt, $value);
+            }
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $this->waitUntilCanFetch();
+            $s = curl_exec($ch);
+            curl_close($ch);
+            $json = json_decode($s);
+            if (!is_array($json) && !is_object($json)) {
+                Logger::singleton()->log('Error fetching data');
+                return '';
+            }
+            if (empty($json)) {
+                break;
+            }
+            $results[] = $json;
         }
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $apiConfig->getHeaders($this, $method));
-        foreach ($apiConfig->getCurlOptions() as $curlOpt => $value) {
-            curl_setopt($ch, $curlOpt, $value);
+        if (!$supportsPagination) {
+            return json_encode($results[0], JSON_PRETTY_PRINT);
         }
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        $this->waitUntilCanFetch();
-        $s = curl_exec($ch);
-        curl_close($ch);
-        $json = json_decode($s);
-        if (!is_array($json) && !is_object($json)) {
-            Logger::singleton()->log('Error fetching data');
-            return '';
+        $arr = [];
+        foreach ($results as $result) {
+            $arr = array_merge($arr, $result);
         }
-        return json_encode($json, JSON_PRETTY_PRINT);
+        return json_encode($arr, JSON_PRETTY_PRINT);
     }
 }

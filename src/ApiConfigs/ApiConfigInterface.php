@@ -14,4 +14,12 @@ interface ApiConfigInterface extends TypeInterface
     public function getCurlOptions(): array;
 
     public function deriveUrl(string $path): string;
+
+    public function supportsPagination(string $path): bool;
+
+    public function getPaginationOffsetInitial(): int;
+
+    public function getPaginationOffsetIncrement(): int;
+
+    public function getPaginationOffsetMaximum(): int;
 }

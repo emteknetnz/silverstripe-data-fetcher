@@ -57,11 +57,35 @@ class TravisApiConfig implements ApiConfigInterface
         return [];
     }
 
-    public function deriveUrl(string $path): string
+    public function deriveUrl(string $path, string $paginationOffset = ''): string
     {
         $domain = self::DOMAIN;
         $remotePath = str_replace($domain, '', $path);
         $remotePath = ltrim($remotePath, '/');
         return "{$domain}/{$remotePath}";
+    }
+
+    public function supportsPagination(string $path): bool
+    {
+        // not actually sure if pagination is supported or not.  simply haven't attemped to implement
+        return false;
+    }
+
+    public function getPaginationOffsetInitial(): int
+    {
+        // untested
+        return 1;
+    }
+
+    public function getPaginationOffsetIncrement(): int
+    {
+        // untested
+        return 1;
+    }
+
+    public function getPaginationOffsetMaximum(): int
+    {
+        // untested
+        return 1;
     }
 }
