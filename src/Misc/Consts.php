@@ -157,11 +157,11 @@ class Consts
                 // 'installers' // supported depenendecy
             ],
             'lekoala' => [
-                'silverstripe-debugbar',
+                // 'silverstripe-debugbar',
             ],
             'hafriedlander' => [
-                'phockito', // supported depenendecy
-                'silverstripe-phockito' // supported depenendecy
+                // 'phockito', // supported depenendecy
+                // 'silverstripe-phockito' // supported depenendecy
             ],
             'silverstripe' => [
                 'cow',
