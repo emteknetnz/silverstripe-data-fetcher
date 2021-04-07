@@ -85,12 +85,13 @@ abstract class AbstractRequester implements TypeInterface
         $this->lastRequestTS = $ts;
     }
 
-    private function buildResponse(ApiData $apiData)
+    private function buildResponse(ApiData $apiData): stdClass
     {
         // ResponseBody may be a json array, json object or null, so add a root node
         // so that fetch can have a return type of stdClass
         // using the key name "root" instead of "data" because "data" is used by some API's
         // and it looks weird to have $json->data->data
-        return json_decode('{"root":'.$apiData->ResponseBody.'}');
+        $root = is_null($apiData->ResponseBody) ? 'null' : $apiData->ResponseBody;
+        return json_decode('{"root":'.$root.'}');
     }
 }
