@@ -55,6 +55,10 @@ class GitHubApiConfig implements ApiConfigInterface
         if (preg_match('#/[0-9]+$#', $path) || preg_match('@/[0-9]+/files$@', $path)) {
             return false;
         }
+        // compare
+        if (preg_match('#/compare/#', $path)) {
+            return false;
+        }
         // returning a list
         return true;
     }
