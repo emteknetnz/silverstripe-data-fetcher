@@ -53,6 +53,11 @@ class RestRequester extends AbstractRequester
         }
         $arr = [];
         foreach ($results as $result) {
+            // Example of non array is github {'message' => 'Not Found'}
+            // such as when requesting from paginatable url of a non-existant branch
+            if (!is_array($result)) {
+                continue;
+            }
             $arr = array_merge($arr, $result);
         }
         return json_encode($arr, JSON_PRETTY_PRINT);
