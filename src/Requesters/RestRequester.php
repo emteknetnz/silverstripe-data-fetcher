@@ -43,7 +43,7 @@ class RestRequester extends AbstractRequester
                 Logger::singleton()->log('Error fetching data');
                 return '';
             }
-            if (empty($json)) {
+            if (empty($json) || !$json) {
                 break;
             }
             $results[] = $json;
