@@ -44,13 +44,23 @@ class GitHubApiConfig implements ApiConfigInterface
             return "{$domain}/{$remotePath}";
         }
         // requesting a list
-        $offset = $paginationOffset ? "&page={$paginationOffset}" : '';
         $op = strpos($remotePath, '?') ? '&' : '?';
-        return "{$domain}/{$remotePath}{$op}per_page=100{$offset}";
+        $offset = $paginationOffset ? "page={$paginationOffset}" : '';
+        if (strpos($remotePath, 'per_page=') !== false) {
+            $off = $offset ? "{$op}{$offset}" : '';
+            return "{$domain}/{$remotePath}{$off}";
+        } else {
+            $off = $offset ? "{$op}{$offset}" : '';
+            return "{$domain}/{$remotePath}{$op}per_page=100{$off}";
+        }
     }
 
     public function supportsPagination(string $path): bool 
     {
+        // manually disable pagination
+        if (strpos($path, '?paginate=0') !== false || strpos($path, '&paginate=0') !== false) {
+            return false;
+        }
         // requesting details
         if (preg_match('#/[0-9]+$#', $path) || preg_match('@/[0-9]+/files$@', $path)) {
             return false;
