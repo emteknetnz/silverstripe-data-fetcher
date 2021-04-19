@@ -41,6 +41,10 @@ class GitHubApiConfig implements ApiConfigInterface
         $remotePath = ltrim($remotePath, '/');
         // requesting details
         if (!$this->supportsPagination($path)) {
+            $remotePath = str_replace('?paginate=0&', '?', $remotePath);
+            $remotePath = str_replace('?paginate=0', '', $remotePath);
+            $remotePath = str_replace('&paginate=0&', '&', $remotePath);
+            $remotePath = str_replace('&paginate=0', '', $remotePath);
             return "{$domain}/{$remotePath}";
         }
         // requesting a list
