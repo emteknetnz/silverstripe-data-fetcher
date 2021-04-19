@@ -15,6 +15,7 @@ class RestRequester extends AbstractRequester
     protected function fetchDataFromApi(string $path, string $postBody = ''): string
     {
         $method = $this->getMethod($postBody);
+        $ucMethod = strtoupper($method);
         $apiConfig = $this->apiConfig;
         $supportsPagination = $apiConfig->supportsPagination($path);
         $initial = $apiConfig->getPaginationOffsetInitial();
@@ -24,6 +25,7 @@ class RestRequester extends AbstractRequester
         for ($offset = $initial; $offset <= $maximum; $offset = $offset + $increment) {
             $ch = curl_init();
             $url = $apiConfig->deriveUrl($path, $offset);
+            Logger::singleton()->log("REST {$ucMethod} {$url}");
             curl_setopt($ch, CURLOPT_URL, $url);
             if ($method == Consts::METHOD_POST) {
                 curl_setopt($ch, CURLOPT_POST, true);

@@ -49,11 +49,11 @@ abstract class AbstractRequester implements TypeInterface
             $apiData->delete();
         } elseif ($apiData) {
             $ucType = strtoupper($this->getType());
-            Logger::singleton()->log("Using local data for {$logStr}");
+            Logger::singleton()->log("Use local data for {$logStr}");
             return $this->buildResponse($apiData);
         }
 
-        Logger::singleton()->log("Fetching {$logStr}");
+        Logger::singleton()->log("Fetch remote data for {$logStr}");
         $json = $this->fetchDataFromApi($path, $postBody);
         if (strtolower($json) === 'null') {
             $json = null;

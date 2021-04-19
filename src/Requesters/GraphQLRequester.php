@@ -14,12 +14,14 @@ class GraphQLRequester extends AbstractRequester
     protected function fetchDataFromApi(string $path, string $postBody = ''): string
     {
         $method = $this->getMethod($postBody);
+        $ucMethod = strtoupper($method);
         $apiConfig = $this->apiConfig;
 
         $lastCursor = '';
-        // TODO: args (.., $lastCursor = '') ... may make sense to do pagination privately within this class
+        // TODO: args (.., $lastCursor = '') ... do pagination privately within this class
 
         $url = $apiConfig->deriveUrl($path);
+        Logger::singleton()->log("REST {$ucMethod} {$url}");
         $queryJson = $this->buildGraphQLQueryJson($postBody);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
