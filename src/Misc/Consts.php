@@ -43,6 +43,7 @@ class Consts
                 'cwp-search',
                 'cwp-starter-theme',
                 'cwp-watea-theme',
+                'doorman',
                 'silverstripe-simple',
                 'silverstripe-akismet',
                 'silverstripe-auditor',
