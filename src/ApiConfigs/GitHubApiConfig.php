@@ -73,6 +73,10 @@ class GitHubApiConfig implements ApiConfigInterface
         if (preg_match('#/compare/#', $path)) {
             return false;
         }
+        // requesting contents of a file
+        if (preg_match('#/contents/#', $path)) {
+            return false;
+        }
         // returning a list
         return true;
     }

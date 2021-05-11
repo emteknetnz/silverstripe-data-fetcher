@@ -22,6 +22,8 @@ class RestRequester extends AbstractRequester
         $increment = $apiConfig->getPaginationOffsetIncrement();
         $maximum = $supportsPagination ? $apiConfig->getPaginationOffsetMaximum() : $initial;
         $results = [];
+        $lastKey = '';
+        $lastValue = '';
         for ($offset = $initial; $offset <= $maximum; $offset = $offset + $increment) {
             $ch = curl_init();
             $url = $apiConfig->deriveUrl($path, $offset);
@@ -47,6 +49,19 @@ class RestRequester extends AbstractRequester
             }
             if (empty($json) || !$json) {
                 break;
+            }
+            // detect duplicate results e.g. /branches?per_page=100&page=1 ... /branches?per_page=100&page=2
+            if (is_array($json)) {
+                $keys = array_keys($json);
+                if (!empty($keys)) {
+                    $currentLastKey = $keys[count($keys) - 1];
+                    $currentLastValue = $json[$currentLastKey];
+                    if ($lastKey == $currentLastKey && $lastValue == $currentLastValue) {
+                        break;
+                    }
+                    $lastKey = $currentLastKey;
+                    $lastValue = $currentLastValue;
+                }
             }
             $results[] = $json;
         }
