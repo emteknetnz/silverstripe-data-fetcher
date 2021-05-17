@@ -43,7 +43,7 @@ class OutputUtil
         foreach ($data as $row) {
             $values = [];
             foreach ($headers as $header) {
-                $values[] = $row[$header];
+                $values[] = htmlentities($row[$header]);
             }
             $lines[] = '<tr><td>' . implode('</td><td>', $values) . '</td></tr>';
             if (++$n >= $maxRows) {
