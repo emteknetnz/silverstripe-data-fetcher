@@ -52,6 +52,7 @@ class Consts
                 'silverstripe-admin',
                 'silverstripe-asset-admin',
                 'silverstripe-assets',
+                'silverstripe-blog',
                 'silverstripe-campaign-admin',
                 'silverstripe-ckan-registry',
                 'silverstripe-cms',
