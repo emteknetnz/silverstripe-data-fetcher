@@ -123,7 +123,7 @@ class Consts
             ],
             'tractorcow' => [
                 'classproxy', // supported dependency
-                'silverstripe-fluent', // supported dependency
+                // 'silverstripe-fluent', // supported dependency - misrepoerting next minor branch as only 4.1.x-dev
                 'silverstripe-proxy-db', // supported dependency
             ],
             'undefinedoffset' => [
