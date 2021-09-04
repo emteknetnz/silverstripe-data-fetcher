@@ -48,7 +48,6 @@ class Consts
                 'silverstripe-simple',
                 'silverstripe-akismet',
                 'silverstripe-auditor',
-                'silverstripe-blog',
                 'comment-notifications',
                 'silverstripe-admin',
                 'silverstripe-asset-admin',
