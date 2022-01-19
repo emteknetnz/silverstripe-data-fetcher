@@ -13,7 +13,6 @@ class Consts
             'bringyourownideas' => [
                 'silverstripe-maintenance',
                 'silverstripe-composer-update-checker',
-                'silverstripe-composer-security-checker',
             ],
             'colymba' => [
                 'GridFieldBulkEditingTools' // supported dependency
@@ -30,6 +29,7 @@ class Consts
                 'silverstripe-userhelp-content', // not an installed module, though still relevant
                 'comment-notifications',
                 'cwp',
+                'cwp-agencyextensions',
                 'cwp-core',
                 'cwp-pdfexport',
                 'cwp-search',
@@ -74,6 +74,7 @@ class Consts
                 'silverstripe-session-manager',
                 'recipe-authoring-tools',
                 'recipe-blog',
+                'recipe-ccl',
                 'recipe-cms',
                 'recipe-collaboration',
                 'recipe-content-blocks',
@@ -142,7 +143,6 @@ class Consts
         ],
         'legacy' => [
             'silverstripe' => [
-                'cwp-agencyextensions',
                 'cwp-installer',
                 'cwp-recipe-cms',
                 'cwp-recipe-core',
@@ -152,7 +152,10 @@ class Consts
                 'silverstripe-controllerpolicy',
                 'silverstripe-elemental-blocks',
                 'silverstripe-sqlite3',
-            ]
+            ],
+            'bringyourownideas' => [
+                'silverstripe-composer-security-checker', // abandoned
+            ],
         ],
         'tooling' => [
             'composer' => [
