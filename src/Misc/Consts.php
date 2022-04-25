@@ -11,15 +11,15 @@ class Consts
     public const MODULES = [
         'regular' => [
             'bringyourownideas' => [
-                'silverstripe-maintenance',
-                'silverstripe-composer-update-checker',
+                // 'silverstripe-maintenance',
+                // 'silverstripe-composer-update-checker',
             ],
             'colymba' => [
-                'GridFieldBulkEditingTools' // supported dependency
+                // 'GridFieldBulkEditingTools' // supported dependency
             ],
             'dnadesign' => [
-                'silverstripe-elemental-subsites', // supported depenendecy
-                'silverstripe-elemental-userforms', // supported depenendecy
+                // 'silverstripe-elemental-subsites', // supported depenendecy
+                // 'silverstripe-elemental-userforms', // supported depenendecy
             ],
             'silverstripe' => [
                 'silverstripe-reports',
@@ -117,25 +117,25 @@ class Consts
                 'silverstripe-queuedjobs',
             ],
             'tractorcow' => [
-                'classproxy', // supported dependency
+            //    'classproxy', // supported dependency
                 // 'silverstripe-fluent', // supported dependency - misrepoerting next minor branch as only 4.1.x-dev
-                'silverstripe-proxy-db', // supported dependency
+            //    'silverstripe-proxy-db', // supported dependency
             ],
             'undefinedoffset' => [
-                'sortablegridfield'
+            //    'sortablegridfield'
             ]
         ],
         'ss3' => [
             'silverstripe' => [
-                'cwp-recipe-basic',
-                'cwp-recipe-basic-dev',
-                'cwp-recipe-blog',
-                'silverstripe-activedirectory',
-                'silverstripe-dms',
-                'silverstripe-dms-cart',
-                'silverstripe-secureassets',
-                'silverstripe-staticpublishqueue',
-                'silverstripe-translatable',
+                // 'cwp-recipe-basic',
+                // 'cwp-recipe-basic-dev',
+                // 'cwp-recipe-blog',
+                // 'silverstripe-activedirectory',
+                // 'silverstripe-dms',
+                // 'silverstripe-dms-cart',
+                // 'silverstripe-secureassets',
+                // 'silverstripe-staticpublishqueue',
+                // 'silverstripe-translatable',
             ],
             'symbiote' => [
                 'silverstripe-versionedfiles',
