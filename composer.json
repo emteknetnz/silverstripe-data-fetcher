@@ -11,5 +11,10 @@
     "require": {
         "silverstripe/framework": "^4.7",
         "symbiote/silverstripe-queuedjobs": "^4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "emteknetnz\\DataFetcher\\": "src/"
+        }
     }
 }
