@@ -180,6 +180,14 @@ class Consts
                 'silverstripe-travis-shared',
                 'silverstripe-testsession',
                 'webpack-config',
+                'gha-ci',
+                'gha-generate-matrix',
+                'gha-run-tests',
+                'gha-auto-tag',
+                'gha-tag-release',
+                'gha-pull-request',
+                'gha-keepalive',
+                'gha-update-js',
             ]
         ],
     ];
