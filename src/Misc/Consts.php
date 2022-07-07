@@ -109,6 +109,7 @@ class Consts
                 'silverstripe-versionfeed', // not in commercially supported list, though is in cwp
                 'sspak',
                 'vendor-plugin',
+                'developer-docs',
             ],
             'symbiote' => [
                 'silverstripe-advancedworkflow',
