@@ -11,15 +11,15 @@ class Consts
     public const MODULES = [
         'regular' => [
             'bringyourownideas' => [
-                // 'silverstripe-maintenance',
-                // 'silverstripe-composer-update-checker',
+                'silverstripe-maintenance',
+                'silverstripe-composer-update-checker',
             ],
             'colymba' => [
                 // 'GridFieldBulkEditingTools' // supported dependency
             ],
             'dnadesign' => [
-                // 'silverstripe-elemental-subsites', // supported depenendecy
-                // 'silverstripe-elemental-userforms', // supported depenendecy
+                'silverstripe-elemental-subsites', // supported depenendecy
+                'silverstripe-elemental-userforms', // supported depenendecy
             ],
             'silverstripe' => [
                 'silverstripe-reports',
@@ -94,6 +94,8 @@ class Consts
                 'silverstripe-sitewidecontent-report',
                 'silverstripe-spamprotection',
                 'silverstripe-spellcheck',
+                'silverstripe-sqlite3',
+                'silverstripe-staticpublishqueue',
                 'silverstripe-subsites',
                 'silverstripe-tagfield',
                 'silverstripe-taxonomy',
