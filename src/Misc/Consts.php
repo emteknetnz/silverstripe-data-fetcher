@@ -107,7 +107,7 @@ class Consts
                 'silverstripe-webauthn-authenticator',
                 'silverstripe-login-forms',
                 'silverstripe-security-extensions',
-                'silverstripe-upgrader',
+                // 'silverstripe-upgrader',
                 'silverstripe-versionfeed', // not in commercially supported list, though is in cwp
                 'sspak',
                 'vendor-plugin',
@@ -180,7 +180,7 @@ class Consts
                 'silverstripe-behat-extension',
                 'silverstripe-serve',
                 'silverstripe-graphql-devtools',
-                'silverstripe-travis-shared',
+                // 'silverstripe-travis-shared',
                 'silverstripe-testsession',
                 'webpack-config',
                 'gha-ci',
