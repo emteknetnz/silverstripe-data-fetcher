@@ -60,6 +60,7 @@ class Consts
                 'silverstripe-elemental-bannerblock',
                 'silverstripe-elemental-fileblock',
                 'silverstripe-environmentcheck',
+                'silverstripe-event-dispatcher',
                 'silverstripe-externallinks',
                 'silverstripe-fulltextsearch',
                 'silverstripe-gridfieldqueuedexport',
