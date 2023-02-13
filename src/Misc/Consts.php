@@ -56,6 +56,7 @@ class Consts
                 'silverstripe-contentreview',
                 'silverstripe-crontask',
                 'silverstripe-documentconverter',
+                'silverstripe-dynamodb',
                 'silverstripe-elemental',
                 'silverstripe-elemental-bannerblock',
                 'silverstripe-elemental-fileblock',
