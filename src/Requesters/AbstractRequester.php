@@ -7,6 +7,7 @@ use emteknetnz\DataFetcher\Misc\Consts;
 use emteknetnz\DataFetcher\Models\ApiData;
 use emteknetnz\DataFetcher\Misc\Logger;
 use emteknetnz\DataFetcher\Interfaces\TypeInterface;
+use LogicException;
 use stdClass;
 
 abstract class AbstractRequester implements TypeInterface
@@ -92,6 +93,13 @@ abstract class AbstractRequester implements TypeInterface
         // using the key name "root" instead of "data" because "data" is used by some API's
         // and it looks weird to have $json->data->data
         $root = is_null($apiData->ResponseBody) ? 'null' : $apiData->ResponseBody;
-        return json_decode('{"root":'.$root.'}');
+        if ($root === '') {
+            $root = '""';
+        }
+        $response = json_decode('{"root":'.$root.'}');
+        if ($response === null && json_last_error() !== JSON_ERROR_NONE) {
+            throw new LogicException(json_last_error_msg());
+        }
+        return $response;
     }
 }
