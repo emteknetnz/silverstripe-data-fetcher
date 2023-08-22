@@ -114,7 +114,8 @@ class Consts
                 'sspak',
                 'vendor-plugin',
                 'developer-docs',
-                '.github'
+                '.github',
+                'silverstripe-frameworktest',
             ],
             'symbiote' => [
                 'silverstripe-advancedworkflow',
