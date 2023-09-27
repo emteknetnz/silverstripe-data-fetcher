@@ -116,6 +116,7 @@ class Consts
                 'developer-docs',
                 '.github',
                 'silverstripe-frameworktest',
+                'silverstripe-linkfield',
             ],
             'symbiote' => [
                 'silverstripe-advancedworkflow',
